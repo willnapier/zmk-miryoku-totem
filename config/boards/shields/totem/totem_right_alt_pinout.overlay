@@ -1,0 +1,21 @@
+/*
+ * Copyright (c) 2022 The ZMK Contributors
+ *
+ * SPDX-License-Identifier: MIT
+ */
+
+#include "totem.dtsi"
+
+&default_transform {
+    col-offset = <5>;
+};
+
+&kscan0 {
+    col-gpios
+        = <&xiao_d 8 GPIO_ACTIVE_HIGH>   // Col 0 (maps to logical Col 5)
+        , <&xiao_d 9 GPIO_ACTIVE_HIGH>   // Col 1 (maps to logical Col 6)
+        , <&xiao_d 10 GPIO_ACTIVE_HIGH>  // Col 2 (maps to logical Col 7)
+        , <&xiao_d 6 GPIO_ACTIVE_HIGH>   // Col 3 (maps to logical Col 8) - CHANGED from D5 to D6
+        , <&xiao_d 4 GPIO_ACTIVE_HIGH>   // Col 4 (maps to logical Col 9)
+        ;
+};

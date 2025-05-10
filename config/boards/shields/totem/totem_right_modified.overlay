@@ -1,0 +1,26 @@
+/*
+ * Copyright (c) 2022 The ZMK Contributors
+ *
+ * SPDX-License-Identifier: MIT
+ */
+
+#include "totem.dtsi"
+
+&default_transform {
+    col-offset = <5>;
+};
+
+&kscan0 {
+    debounce-press-ms = <20>;    /* Longer debounce for extra stability */
+    debounce-release-ms = <20>;  /* Longer debounce for extra stability */
+    diode-direction = "col2row";  /* Ensure this is explicitly set */
+    
+    /* Reorganize columns to use D6 instead of D5 for the column with 'i' */
+    col-gpios
+        = <&xiao_d 8 GPIO_ACTIVE_HIGH>   // Col 0 (originally Column 0)
+        , <&xiao_d 9 GPIO_ACTIVE_HIGH>   // Col 1 (originally Column 1)
+        , <&xiao_d 10 GPIO_ACTIVE_HIGH>  // Col 2 (originally Column 2)
+        , <&xiao_d 6 GPIO_ACTIVE_HIGH>   // Col 3 (originally Column 3 with D5, now using D6)
+        , <&xiao_d 4 GPIO_ACTIVE_HIGH>   // Col 4 (originally Column 4)
+        ;
+};

@@ -1,0 +1,13 @@
+# Build directories
+/build/
+*.uf2
+
+# ZMK core modules (large directories)
+/zephyr/
+/modules/
+/zmk/
+/.west/
+
+# Other
+.DS_Store
+*.log

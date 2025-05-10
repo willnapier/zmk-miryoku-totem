@@ -1,0 +1,9 @@
+// Copyright 2022 Manna Harbour
+// https://github.com/manna-harbour/miryoku
+
+// This is a clean Miryoku layout for Totem keyboard with GACS modifiers
+// No custom workarounds or modifications to the standard Miryoku system
+
+#include "./miryoku/custom_config.h"
+#include "./miryoku/mapping/38/totem.h"
+#include "./miryoku/miryoku.dtsi"

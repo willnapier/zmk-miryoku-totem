@@ -1,0 +1,8 @@
+# Copyright (c) 2024 The ZMK Contributors
+# SPDX-License-Identifier: MIT
+
+config SHIELD_TOTEM_LEFT
+    bool "Totem left half"
+
+config SHIELD_TOTEM_RIGHT
+    bool "Totem right half"
