@@ -10,4 +10,5 @@
 
 # Other
 .DS_Store
-*.log
+*.log# UF2 firmware files
+*.uf2
